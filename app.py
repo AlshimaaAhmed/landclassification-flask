@@ -244,6 +244,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    print("Starting server on http://127.0.0.1:3000")
-    print("Make sure CLIENT_ID and CLIENT_SECRET are set in environment if you use map download.")
-    app.run()
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
